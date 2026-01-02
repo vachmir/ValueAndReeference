@@ -4,35 +4,35 @@
     {
         static void Main(string[] args)
         {
-            //int a = 10;
-            //Change(a);
-            //Console.WriteLine($"Value type Without Ref Keyword - {a}");
-            //Console.WriteLine();
+            int a = 10;
+            Change(a);
+            Console.WriteLine($"Value type Without Ref Keyword - {a}");
+            Console.WriteLine();
 
-            //int b = 20;            
-            //ChangeRef(ref b);
-            //Console.WriteLine($"Value type With Ref Keyword - {b}");
-            //Console.WriteLine();
+            int b = 20;
+            ChangeRef(ref b);
+            Console.WriteLine($"Value type With Ref Keyword - {b}");
+            Console.WriteLine();
 
-            //Box box = new Box {  Value = 44 };
-            //ChangeClass(box);
-            //Console.WriteLine($"Change Reference type Without Ref Keyword - {box.Value}");
-            //Console.WriteLine();
+            Box box = new Box { Value = 44 };
+            ChangeClass(box);
+            Console.WriteLine($"Change Reference type Without Ref Keyword - {box.Value}");
+            Console.WriteLine();
 
-            //Box boxRef = new Box { Value = 10 };
-            //ChangeRefClass(ref boxRef);
-            //Console.WriteLine($"Change Reference type With Ref Keyword - {boxRef.Value}");
-            //Console.WriteLine();
-            //Console.WriteLine();
+            Box boxRef = new Box { Value = 10 };
+            ChangeRefClass(ref boxRef);
+            Console.WriteLine($"Change Reference type With Ref Keyword - {boxRef.Value}");
+            Console.WriteLine();
+            Console.WriteLine();
 
-            //Console.WriteLine("Examples with Strings");
-            //string text = "Hello";
-            //ChangeString(text);
-            //Console.WriteLine($"Change the string Without Ref - {text}");
+            Console.WriteLine("Examples with Strings");
+            string text = "Hello";
+            ChangeString(text);
+            Console.WriteLine($"Change the string Without Ref - {text}");
 
-            //string text2 = "Hello";
-            //ChangeStringRef(ref text2);
-            //Console.WriteLine($"Change the string With Ref - {text2}");
+            string text2 = "Hello";
+            ChangeStringRef(ref text2);
+            Console.WriteLine($"Change the string With Ref - {text2}");
 
 
             #region Assignment and Modification 1
@@ -64,23 +64,23 @@
             #endregion
 
 
-            Box box;
+            Box box6;
 
-            box = new Box { Value = 10 };
-            Modify(box);
-            Print("Modify WITHOUT ref", box);
+            box6 = new Box { Value = 10 };
+            Modify(box6);
+            Print("Modify WITHOUT ref", box6);
 
-            box = new Box { Value = 10 };
-            Reassign(box);
-            Print("Reassign WITHOUT ref", box);
+            box6 = new Box { Value = 10 };
+            Reassign(box6);
+            Print("Reassign WITHOUT ref", box6);
 
-            box = new Box { Value = 10 };
-            ModifyRef(ref box);
-            Print("Modify WITH ref", box);
+            box6 = new Box { Value = 10 };
+            ModifyRef(ref box6);
+            Print("Modify WITH ref", box6);
 
-            box = new Box { Value = 10 };
-            ReassignRef(ref box);
-            Print("Reassign WITH ref", box);
+            box6 = new Box { Value = 10 };
+            ReassignRef(ref box6);
+            Print("Reassign WITH ref", box6);
 
 
             int[] smallArray = { 1, 2, 3, 4, 5 };
@@ -100,33 +100,19 @@
             Console.WriteLine(string.Join(" ", smallArray));
             Console.WriteLine(string.Join(" ", largeArray));
 
-            int[] a = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 };
+            int[] array = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 };
 
             
-            // B 
-            var result = a[^3] - a[2] + a[^8];
+            var result = array[^3] - array[2] + array[^8];
             // result == 8 
             
-            Console.WriteLine(a[2..5]);
+            Console.WriteLine(array[2..5]);
 
-            Console.WriteLine(a[^8]);
+            Console.WriteLine(array[^8]);
 
             Console.WriteLine($"|{"Left",-7}|{"Right",7}|");
 
-            const string s1 = "Hello, world!";
-            string s2 = "Hello, world!";
-
-            // A
-            const string str = "\\Hello" + ", " + "world" + "!\\";
-
-            // B 
-            const string str2 = $"{s1}";
-
-            // C 
-            const string str4 = $"\\\u0048ello, world!\\";
-
-            // D 
-            string str = string.Format("{1} {0}", "Hello,", "world!");
+            
         }
 
         #region Pass by Value and Reference        
